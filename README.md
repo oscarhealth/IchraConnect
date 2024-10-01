@@ -1,3 +1,3 @@
-# IchraConnectDocsWebsite
+# IchraConnect
 
 Coming soon!
