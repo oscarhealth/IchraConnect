@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to ICHRA Connect – ICHRA Connect</title>
+<title>Inbound Enrollment Spec – ICHRA Connect</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Getting Started</strong></a></li><li class="breadcrumb-item"><a href="./index.html">Welcome to ICHRA Connect</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./csv_implementation_guide.html"><strong>CSV</strong></a></li><li class="breadcrumb-item"><a href="./inbound_enrollment_spec.html">Inbound Enrollment Spec</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -139,7 +139,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome to ICHRA Connect</span></a>
   </div>
 </li>
@@ -191,7 +191,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./inbound_enrollment_spec.html" class="sidebar-item-text sidebar-link">
+  <a href="./inbound_enrollment_spec.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Inbound Enrollment Spec</span></a>
   </div>
 </li>
@@ -332,32 +332,20 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ichra-at-oscar" id="toc-ichra-at-oscar" class="nav-link active" data-scroll-target="#ichra-at-oscar">ICHRA at Oscar</a></li>
-  <li><a href="#why-ichra" id="toc-why-ichra" class="nav-link" data-scroll-target="#why-ichra">Why ICHRA?</a></li>
-  <li><a href="#what-is-ichra-connect" id="toc-what-is-ichra-connect" class="nav-link" data-scroll-target="#what-is-ichra-connect">What is ICHRA Connect?</a></li>
-  <li><a href="#our-singular-focus" id="toc-our-singular-focus" class="nav-link" data-scroll-target="#our-singular-focus">Our Singular Focus</a></li>
-  <li><a href="#how-were-doing-it" id="toc-how-were-doing-it" class="nav-link" data-scroll-target="#how-were-doing-it">How We’re Doing It</a></li>
-  <li><a href="#open-source" id="toc-open-source" class="nav-link" data-scroll-target="#open-source">Open Source</a></li>
-  <li><a href="#how-to-integrate-with-oscar" id="toc-how-to-integrate-with-oscar" class="nav-link" data-scroll-target="#how-to-integrate-with-oscar">How to Integrate with Oscar</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Getting Started</strong></a></li><li class="breadcrumb-item"><a href="./index.html">Welcome to ICHRA Connect</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./csv_implementation_guide.html"><strong>CSV</strong></a></li><li class="breadcrumb-item"><a href="./inbound_enrollment_spec.html">Inbound Enrollment Spec</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome to ICHRA Connect</h1>
+<h1 class="title">Inbound Enrollment Spec</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -369,72 +357,545 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </header>
 
 
-<section id="ichra-at-oscar" class="level3">
-<h3 class="anchored" data-anchor-id="ichra-at-oscar">ICHRA at Oscar</h3>
-<p>At Oscar, our mission is to make a healthier life accessible and affordable for all. We believe that a larger individual market is the best solution for Americans and view ICHRA (Individual Coverage Health Reimbursement Arrangement) as the future of health benefits. Just like the 401k revolutionized retirement planning, ICHRA is poised to transform health benefits by putting the individual in control, while also giving employers reduced and predictable healthcare costs. Demand and awareness are growing, and Oscar is paving the way for the future of ICHRA.</p>
-</section>
-<section id="why-ichra" class="level3">
-<h3 class="anchored" data-anchor-id="why-ichra">Why ICHRA?</h3>
-<p>ICHRA is a great option for both employers and employees, providing:</p>
-<ul>
-<li><strong>Flexibility:</strong> Employers can tailor contributions to different classes of employees, providing a customizable approach to health benefits.</li>
-<li><strong>Affordability:</strong> Employers have predictable costs by setting defined contribution amounts, avoiding the unpredictability of traditional group health insurance premiums.</li>
-<li><strong>Choice:</strong> Employees can choose individual health plans that best meet their schedules, locations, and health needs, enhancing satisfaction and coverage suitability.</li>
-<li><strong>Portability:</strong> Employees can keep their plan design, mid-year accumulations towards deductibles, and provider network, if and when they leave their employer.</li>
-</ul>
-<hr>
-</section>
-<section id="what-is-ichra-connect" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-ichra-connect">What is ICHRA Connect?</h3>
-<p>ICHRA Connect is an open source, universal, company-agnostic integration specification designed to reduce friction, encourage faster growth of the ICHRA market, and allow ICHRA administrators to integrate seamlessly with carriers. Oscar’s goal is to prove the viability of administrator-to-carrier interoperability and set a standard for a functioning ICHRA marketplace.</p>
-<p>ICHRA Connect will streamline shopping, enrollment, billing, and other operational workflows to offer an ICHRA experience that rivals or surpasses traditional group plans. ICHRA Connect will standardize data reconciliation and eligibility updates, bringing ICHRA on par with group and on-exchange ACA experiences. Additionally, Oscar intends to establish shared data integration standards to enhance collaboration among ICHRA stakeholders and foster a more efficient market.</p>
-</section>
-<section id="our-singular-focus" class="level3">
-<h3 class="anchored" data-anchor-id="our-singular-focus">Our Singular Focus</h3>
-<p>With ICHRA Connect, Oscar aims to create a shared technical infrastructure that enables carriers and administrators to work together to scale the ICHRA market.</p>
-</section>
-<section id="how-were-doing-it" class="level3">
-<h3 class="anchored" data-anchor-id="how-were-doing-it">How We’re Doing It</h3>
-<p>Oscar is developing an open integration specification to streamline ICHRA workflows, including:</p>
-<ul>
-<li>Shopping &amp; Enrollment<br>
-</li>
-<li>Eligibility<br>
-</li>
-<li>Billing &amp; Payment<br>
-</li>
-<li>Other operational workflows necessary to offer an ICHRA experience that is on par or better than the group plan experience</li>
-</ul>
-<p>Oscar understands that the landscape of health benefits, especially ICHRA, is constantly evolving. To stay ahead of these changes:</p>
-<ul>
-<li>Oscar is developing specifications in collaboration with ICHRA administrators and other carriers through working groups.</li>
-<li>Oscar’s standards will explicitly ensure that member data is easily reconcilable and that member eligibility status is as accurate as possible between vendors and carriers.<br>
-</li>
-<li>Oscar’s integration standards will continuously evolve to meet new challenges and opportunities.<br>
-</li>
-<li>Oscar plans to develop a RESTful API standard that will further streamline integrations, enhance interoperability, and provide a more seamless experience for all stakeholders involved in the ICHRA ecosystem.</li>
-</ul>
-</section>
-<section id="open-source" class="level3">
-<h3 class="anchored" data-anchor-id="open-source">Open Source</h3>
-<p>The ICHRA Connect integration specification is open source and licensed under a commercially permissive <a href="LICENSE">Apache 2.0 License</a>. We welcome you to use the ICHRA Connect specification to power your data integration. You can also contribute bugs, feature, and improvements by joining our working group or filing an Issue in our Github repo. The source code for this website and the specifications can be found at <a href="https://github.com/oscarhealth/IchraConnect">github.com/oscarhealth/IchraConnect</a></p>
-</section>
-<section id="how-to-integrate-with-oscar" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-integrate-with-oscar">How to Integrate with Oscar</h3>
-<p>If you’re interested in setting up an ICHRA integration with Oscar, please reach out to <a href="mailto:ichra@hioscar.com">ichra@hioscar.com</a> for more information or <a href="./integrating_with_oscar.html">see our high-level overview and technical specifications</a> for ICHRA integrations.</p>
-<hr>
-<div style="border: 2px solid #0073e6; padding: 20px; border-radius: 10px; background-color: #f0f8ff; text-align: center;">
-<h3 class="anchored">
-Adopt the ICHRA Connect Specification
-</h3>
-<p>
-If you are a carrier interested in modifying or adopting the ICHRA Connect integration specifications, please reach out to join our working groups.
-</p>
-<p><a href="mailto:ichra@hioscar.com" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #0073e6; border-radius: 5px; text-decoration: none;">Contact Us</a></p>
-</div>
+<table class="table-striped caption-top table">
+<thead>
+<tr class="header">
+<th>Field Name</th>
+<th>DataType</th>
+<th>Description</th>
+<th>Format</th>
+<th>Example</th>
+<th>Length</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>broker.first_name</td>
+<td>String</td>
+<td>Broker First Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>broker.middle_name</td>
+<td>String</td>
+<td>Broker Middle Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>broker.last_name</td>
+<td>String</td>
+<td>Broker Last Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>broker.prefix(d)</td>
+<td>String</td>
+<td>Broker Prefix</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>broker.suffix(d)</td>
+<td>String</td>
+<td>Broker Suffix</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>broker.phone_number</td>
+<td>String</td>
+<td>Broker’s phone number</td>
+<td>Valid 10-digit Phone Number (No delimiters)</td>
+<td>5109027836</td>
+<td>15</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>broker.email</td>
+<td>String</td>
+<td>Broker’s email address</td>
+<td>Valid Email Format (No delimiters)</td>
+<td>john@test.com</td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>broker.npn</td>
+<td>String</td>
+<td>Broker’s National Producer Number - required for enrollee attribution</td>
+<td>Valid 9-digit NPN (No delimiters)</td>
+<td>123530000</td>
+<td>25</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>plan.year</td>
+<td>String</td>
+<td>Plan Year</td>
+<td>Valid plan year</td>
+<td>2025</td>
+<td>4</td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>plan.hios_id</td>
+<td>String</td>
+<td>HIOS id</td>
+<td>14 digit HIOS id code including variant</td>
+<td>50221NJ0040001-02</td>
+<td>15</td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>plan.monthly_premium</td>
+<td>String</td>
+<td>Plan Monthly Premium</td>
+<td>Valid decimal value</td>
+<td>999.99</td>
+<td>20</td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>payment.routing_number</td>
+<td>Digit</td>
+<td></td>
+<td></td>
+<td>021000021</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>payment.account_number</td>
+<td>Digit</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>payment.payer_name</td>
+<td>String</td>
+<td>The name of payer</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>payment.account_type</td>
+<td>Enum</td>
+<td>The account type of ACH</td>
+<td></td>
+<td>CHECKING</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>payment.is_new_payment_instrument</td>
+<td>Boolean</td>
+<td>True if this is new or updated payment instrument</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollment.renewal_type</td>
+<td>Enum (ACTIVE/PASSIVE)</td>
+<td>Renewal Type</td>
+<td>Valid enum value (See DataType column)</td>
+<td>INITIATION</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollment.external_policy_id</td>
+<td>String</td>
+<td>Unique identifier for the policy (coming from the partner)(important)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollment.external_subscriber_id(d)</td>
+<td>String</td>
+<td>Required if PlanChange/Cancel enrollment<br> Same as subscriber’s external_member_id</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollment.cancel_overlapping_eligibility(d)</td>
+<td>Boolean</td>
+<td>Term or cancel existing eligibility if it overlaps and prefer new one</td>
+<td>Valid Boolean String</td>
+<td>False</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollment.date_signed</td>
+<td>String</td>
+<td>Time when broker or consumer submitted their enrollment</td>
+<td>ISO Format</td>
+<td>2011-11-04 00:05:23.283+00:00</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollment.qualifying_event</td>
+<td>Enum</td>
+<td>Enrollment Qualifying Event</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollment.qualifying_event_date</td>
+<td>String</td>
+<td>Enrollment Qualifying Event Date</td>
+<td>YYYY-MM-DD</td>
+<td>1996-01-01</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollment.application_id</td>
+<td>String</td>
+<td>The ID of the application</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>employer.employer_name</td>
+<td>String</td>
+<td>The name of employer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>employer.employer_tin</td>
+<td>String</td>
+<td>The tax number of employer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>enrollee.external_member_id</td>
+<td>String</td>
+<td>member ID defined by vendor</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.issuer_member_id</td>
+<td>String</td>
+<td>member ID defined by issuer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>enrollee.first_name</td>
+<td>String</td>
+<td>Enrollee First Name</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.middle_name</td>
+<td>String</td>
+<td>Enrollee Middle Name</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.last_name</td>
+<td>String</td>
+<td>Enrollee Last Name</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.prefix</td>
+<td>String</td>
+<td>Enrollee Prefix</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.suffix</td>
+<td>String</td>
+<td>Enrollee Suffix</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.phone</td>
+<td>String</td>
+<td>Enrollee Phone Number</td>
+<td>Valid 10-digit Phone Number (No delimiters)</td>
+<td>5109027836</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.email</td>
+<td>String</td>
+<td>Enrollee Email</td>
+<td>Valid Email Format</td>
+<td>john@test.com</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.ssn</td>
+<td>String</td>
+<td>Enrollee Social Security Number</td>
+<td>Valid 9-digit SSN (No delimiters)</td>
+<td>123456789</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.marital_status</td>
+<td>Enum</td>
+<td>Enrollee Marital Status</td>
+<td>Valid enum value (See Marital Status Mapping)</td>
+<td>M</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.sex</td>
+<td>Enum (MALE/FEMALE)</td>
+<td>Enrollee Sex</td>
+<td>Valid enum value (See DataType column)</td>
+<td>FEMALE</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.date_of_birth</td>
+<td>String</td>
+<td>Enrollee Date of Birth</td>
+<td>YYYY-MM-DD</td>
+<td>1996-01-01</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.ethnicity</td>
+<td>Enum</td>
+<td>Enrollee Ethnicity</td>
+<td>Valid enum value (See Ethnicity Code mapping)</td>
+<td>2135-2</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.is_tobacco_user</td>
+<td>Boolean</td>
+<td>Specifies is enrollee is a tobacco user</td>
+<td>Valid Boolen String</td>
+<td>TRUE</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.relationship_to_policy_holder</td>
+<td>Enum</td>
+<td>Specifies enrollee’s relationship to policy holder</td>
+<td>Valid enum value (See Relationship Code Mapping)</td>
+<td>15</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.is_requesting_coverage(d)</td>
+<td>Boolean</td>
+<td>Specifies if enrollee is requesting coverage</td>
+<td>Valid Boolen String</td>
+<td>TRUE</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.coverage_start_date</td>
+<td>String</td>
+<td>Coverage Start Date for enrollee</td>
+<td>YYYY-MM-DD</td>
+<td>1996-01-01</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.coverage_end_date</td>
+<td>String</td>
+<td>Coverage End Date for enrollee</td>
+<td>YYYY-MM-DD</td>
+<td>1996-01-01</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.language_preference</td>
+<td>Enum</td>
+<td>Enrollee Language Preference</td>
+<td>Valid enum value (See Language Code mapping)</td>
+<td>spa</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.mailing_address.address_line_1</td>
+<td>String</td>
+<td>Enrollee Mailing Address Line 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.mailing_address.address_line_2</td>
+<td>String</td>
+<td>Enrollee Mailing Address Line 2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.mailing_address.city</td>
+<td>String</td>
+<td>Enrollee Mailing Address City</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.mailing_address.state</td>
+<td>String</td>
+<td>Enrollee Mailing Address State</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>enrollee.mailing_address.zipcode</td>
+<td>String</td>
+<td>Enrollee Mailing Address Zipcode</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.residential_address.address_line_1</td>
+<td>String</td>
+<td>Enrollee Residential Address Line 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.residential_address.address_line_2</td>
+<td>String</td>
+<td>Enrollee Residential Address Line 2</td>
+<td></td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>enrollee.residential_address.city</td>
+<td>String</td>
+<td>Enrollee Residential Address City</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.residential_address.state</td>
+<td>String</td>
+<td>Enrollee Residential Address State</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.residential_address.zipcode</td>
+<td>String</td>
+<td>Enrollee Residential Address Zipcode</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="odd">
+<td>enrollee.change_type</td>
+<td>Enum</td>
+<td>Type of modification made to the enrollee’s policy status</td>
+<td></td>
+<td>CHANGE, ADDITION, CANCELLATION, TERMINATION, REINSTATEMENT</td>
+<td></td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>enrollee.additional_maintenance_reason</td>
+<td>String</td>
+<td><a href="./supported_additional_maintenance_reasons.html">Additional maintenance reason code</a> for the policy status change.</td>
+<td></td>
+<td><a href="./supported_additional_maintenance_reasons.html">e.g.&nbsp;LEAVE_PLATFORM</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,1 +1,0 @@
-Sitemap: https://oscarhealth.github.io/IchraConnect/sitemap.xml
