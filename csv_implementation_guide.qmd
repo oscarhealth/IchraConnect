@@ -8,7 +8,7 @@ ICHRA Connect also supports a CSV file-based data integrations in addition to th
 
 The integration between a carrier and the administrator includes four CSV data files. All file directions are in relation to carrier:
 
-* Inbound Enrollment File: Combined Payment & Enrollment
+* Inbound Enrollment File: Combined Payment & Enrollment 
 * Outbound Ack File: Enrollment file parsing acknowledgment
 * Outbound Enrollment File: Enrollment confirmation
 * Outbound Reconciliation: Billing & Eligibility reconciliation
