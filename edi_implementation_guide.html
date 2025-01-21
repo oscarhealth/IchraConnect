@@ -376,12 +376,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="integration-file-summary">Integration Summary</h2>
 <p>The integration between carrier and an administrator includes three EDI pipelines and one CSV reconciliation file. All file directions are in relation to carrier:</p>
 <ul>
-<li>Carrier Outbound enrollment: 834 EDI with TA1/999<br>
-</li>
-<li>Carrier Inbound enrollment: 834 EDI with TA1/999<br>
-</li>
-<li>Carrier Inbound payment: Direct ACH wire transfer with 820 EDI remittance and TA1/999<br>
-</li>
+<li>Carrier Outbound enrollment: 834 EDI with TA1/999</li>
+<li>Carrier Inbound enrollment: 834 EDI with TA1/999</li>
+<li>Carrier Inbound payment: Direct ACH wire transfer with 820 EDI remittance and TA1/999</li>
 <li>Outbound Reconciliation: Billing &amp; Eligibility reconciliation</li>
 </ul>
 <p><img src="ICHRA_EDI_Integration_Flow.png" class="img-fluid"></p>
@@ -396,7 +393,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="ichra-platform-disenrollments-soft-terms" class="level3">
 <h3 class="anchored" data-anchor-id="ichra-platform-disenrollments-soft-terms">ICHRA Platform Disenrollments (“Soft terms”)</h3>
 <p>If an employer decides to switch ICHRA administrators or an employee loses their ICHRA benefits (e.g.&nbsp;through loss of a job), they still may retain their carrier’s ACA IFP coverage as a non-ICHRA member and pay for their coverage out of pocket.</p>
-<p>To let carrier know when a member is no longer enrolled through the administrator but has not terminated their coverage, the administrator will send an update type enrollment transaction with additional maintenance reason code (AMRC) LEAVE_PLATFROM on an inbound enrollment transaction in the AMRC field of the 2750 Loop.</p>
+<p>To let carrier know when a member is no longer enrolled through the administrator but has not terminated their coverage, the administrator will send an update type enrollment transaction with additional maintenance reason code (AMRC) LEAVE_PLATFORM on an inbound enrollment transaction in the AMRC field of the 2750 Loop.</p>
 </section>
 </section>
 <section id="payment-spec" class="level2">
@@ -415,17 +412,13 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="inbound-enrollment-834-edi" class="level4">
 <h4 class="anchored" data-anchor-id="inbound-enrollment-834-edi">Inbound Enrollment 834 EDI</h4>
 <ul>
-<li>File type: 834 EDI<br>
-</li>
+<li>File type: 834 EDI</li>
 <li>File spec: <a href="CMS_X12_834_Companion_Guide_v7.2.pdf" target="_blank">CMS X12 834 Companion Guide v7.2</a></li>
-<li>Cadence: Daily batch<br>
-</li>
-<li>834 naming convention: FROM_ADMIN.I834.DYYYYMMDD.Thhmmss.P.edi<br>
-</li>
+<li>Cadence: Daily batch</li>
+<li>834 naming convention: FROM_ADMIN.I834.DYYYYMMDD.Thhmmss.P.edi</li>
 <li>TA1/999 naming convention:
 <ul>
-<li>TA1: TO_ADMIN.TA1.DYYYYMMDD.Thhmmss.P.edi<br>
-</li>
+<li>TA1: TO_ADMIN.TA1.DYYYYMMDD.Thhmmss.P.edi</li>
 <li>999: TO_ADMIN.999.DYYYYMMDD.Thhmmss.P.edi</li>
 </ul></li>
 <li>Sample file: <a href="sample_files/FROM_VENDOR.I834.D20241114.T125545.P.edi" target="_blank">here</a></li>
@@ -434,17 +427,13 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="outbound-enrollment-834-edi" class="level4">
 <h4 class="anchored" data-anchor-id="outbound-enrollment-834-edi">Outbound Enrollment 834 EDI</h4>
 <ul>
-<li>File type: 834 EDI<br>
-</li>
+<li>File type: 834 EDI</li>
 <li>File spec: <a href="CMS_X12_834_Companion_Guide_v7.2.pdf" target="_blank">CMS X12 834 Companion Guide v7.2</a></li>
-<li>Cadence: Daily batch<br>
-</li>
-<li>834 naming convention: TO_ADMIN.I834.DYYYYMMDD.Thhmmss.P.edi<br>
-</li>
+<li>Cadence: Daily batch</li>
+<li>834 naming convention: TO_ADMIN.I834.DYYYYMMDD.Thhmmss.P.edi</li>
 <li>TA1/999 naming convention:
 <ul>
-<li>TA1: FROM_ADMIN.TA1.DYYYYMMDD.Thhmmss.P.edi<br>
-</li>
+<li>TA1: FROM_ADMIN.TA1.DYYYYMMDD.Thhmmss.P.edi</li>
 <li>999: FROM_ADMIN.999.DYYYYMMDD.Thhmmss.P.edi</li>
 </ul></li>
 <li>Sample file: <a href="sample_files/TO_VENDOR.I834.D20241114.T113452.P.edi" target="_blank">here</a></li>
@@ -453,15 +442,11 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="inbound-payment-820-edi" class="level4">
 <h4 class="anchored" data-anchor-id="inbound-payment-820-edi">Inbound Payment 820 EDI</h4>
 <ul>
-<li>File type: 820 EDI<br>
-</li>
-<li>File spec: <a href="https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/hix%20820%20and%20ppr%20companion%20guide_219.pdf">FT HIX 820 Companion Guide v4</a><br>
-</li>
+<li>File type: 820 EDI</li>
+<li>File spec: <a href="https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/hix%20820%20and%20ppr%20companion%20guide_219.pdf">FT HIX 820 Companion Guide v4</a></li>
 <li>Cadence: Batched monthly with ad hoc files as needed</li>
-<li>Payment memo: Include administrator name in the memo description<br>
-</li>
-<li>820 Naming convention: EDI.I820.DYYYYMMDD.Thhmmss.P.edi<br>
-</li>
+<li>Payment memo: Include administrator name in the memo description</li>
+<li>820 Naming convention: EDI.I820.DYYYYMMDD.Thhmmss.P.edi</li>
 <li>TA1/999 Naming convention:</li>
 <li>Sample file: <a href="sample_files/EDI.820.D20241114.T082645.P.edi" target="_blank">here</a></li>
 </ul>
@@ -469,13 +454,10 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="outbound-reconciliation-csv" class="level4">
 <h4 class="anchored" data-anchor-id="outbound-reconciliation-csv">Outbound Reconciliation CSV</h4>
 <ul>
-<li>File type: CSV<br>
-</li>
+<li>File type: CSV</li>
 <li>File spec: <a href="./outbound_reconcilliation_spec.html">Outbound Reconciliation Spec</a></li>
-<li>Cadence: Weekly<br>
-</li>
-<li>Full or Delta: Full snapshot of plan year, with 3 month look back to previous year<br>
-</li>
+<li>Cadence: Weekly</li>
+<li>Full or Delta: Full snapshot of plan year, with 3 month look back to previous year</li>
 <li>Naming Convention: FROM_CARRIER_SNAPSHOT.OUT.YYYYMMDDThhmmss.P.csv</li>
 <li>Sample file: <a href="sample_files/FROM_OSCAR_SNAPSHOT.OUT.20241015T190751.P.csv" target="_blank">here</a></li>
 </ul>

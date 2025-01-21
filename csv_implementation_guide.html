@@ -376,12 +376,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="integration-file-summary">Integration Summary</h2>
 <p>The integration between a carrier and the administrator includes four CSV data files. All file directions are in relation to carrier:</p>
 <ul>
-<li>Inbound Enrollment File: Combined Payment &amp; Enrollment<br>
-</li>
-<li>Outbound Ack File: Enrollment file parsing acknowledgment<br>
-</li>
-<li>Outbound Enrollment File: Enrollment confirmation<br>
-</li>
+<li>Inbound Enrollment File: Combined Payment &amp; Enrollment</li>
+<li>Outbound Ack File: Enrollment file parsing acknowledgment</li>
+<li>Outbound Enrollment File: Enrollment confirmation</li>
 <li>Outbound Reconciliation: Billing &amp; Eligibility reconciliation</li>
 </ul>
 <p><img src="ICHRA_CSV_Integration_Flow.png" class="img-fluid"></p>
@@ -393,8 +390,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <p>At the time of enrollment, carrier enables Autopay for each enrolled member, withdraws members’ initial binder payments, and effectuates them. Members must affirmatively confirm that the employer will be making payments on their behalf as part of the administrator enrollment flow.</p>
 <p>After autopay is enabled, carrier will automatically draft:</p>
 <ul>
-<li>Binder payments: before state regulatory deadlines, which may be as early as the enrollment date.<br>
-</li>
+<li>Binder payments: before state regulatory deadlines, which may be as early as the enrollment date.</li>
 <li>Full outstanding balance: members may be drafted one or more times per month to ensure balance is paid by the premium due date. Exact auto-draft dates will be selected by carrier and the administrator.</li>
 </ul>
 <section id="ichra-group-employer-information" class="level3">
@@ -404,7 +400,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="ichra-administrator-disenrollments-soft-terms" class="level3">
 <h3 class="anchored" data-anchor-id="ichra-administrator-disenrollments-soft-terms">ICHRA Administrator Disenrollments (“Soft terms”)</h3>
 <p>If an employer decides to switch ICHRA platform administrators or an employee loses their ICHRA benefits (e.g.&nbsp;through loss of a job), they still may retain their carrier’s ACA IFP coverage as a non-ICHRA member and pay for their coverage out of pocket.</p>
-<p>To let the carrier know when a member is no longer enrolled through the administrator platform but has not terminated their coverage, the administrator will send a CHANGE type enrollment transaction with maintenance reason code LEAVE_PLATFROM on an inbound enrollment transaction.</p>
+<p>To let the carrier know when a member is no longer enrolled through the administrator platform but has not terminated their coverage, the administrator will send a CHANGE type enrollment transaction with maintenance reason code LEAVE_PLATFORM on an inbound enrollment transaction.</p>
 </section>
 <section id="refunds" class="level3">
 <h3 class="anchored" data-anchor-id="refunds">Refunds</h3>
@@ -412,7 +408,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </section>
 <section id="reconciliation" class="level3">
 <h3 class="anchored" data-anchor-id="reconciliation">Reconciliation</h3>
-<p>We uses a weekly reconciliation file to ensure eligibility and billing data is aligned between carrier and the administrator in order to avoid disruptions to member coverage or experiences; for example, a mid-month increase to members’ premiums that could result in declined transactions at time of auto-pay.</p>
+<p>We use a weekly reconciliation file to ensure eligibility and billing data is aligned between carrier and the administrator in order to avoid disruptions to member coverage or experiences; for example, a mid-month increase to members’ premiums that could result in declined transactions at time of auto-pay.</p>
 <p>The reconciliation file is a full change file that contains a snapshot of all plan year YTD membership, including cancelled and termed members, plus a 3 month prior-year lookback.</p>
 <p>Each enrolled member will have one record per month enrolled with the corresponding monthly premium amount for that month.</p>
 <p><img src="ICHRA_CSV_Payment_Flow.png" class="img-fluid"></p>
@@ -422,17 +418,12 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="inbound-enrollment-file" class="level4">
 <h4 class="anchored" data-anchor-id="inbound-enrollment-file">Inbound Enrollment File</h4>
 <ul>
-<li>Direction: Carrier inbound/administrator outbound<br>
-</li>
-<li>File type: CSV<br>
-</li>
+<li>Direction: Carrier inbound/administrator outbound</li>
+<li>File type: CSV</li>
 <li>File spec: <a href="./inbound_enrollment_spec.html">Inbound Enrollment Spec</a></li>
-<li>Cadence: Daily<br>
-</li>
-<li>Naming convention: FROM_ADMIN_NAME.EMT.YYYYMMDDThhmmss.P.csv<br>
-</li>
-<li>Delta file or full file: Delta<br>
-</li>
+<li>Cadence: Daily</li>
+<li>Naming convention: FROM_ADMIN_NAME.EMT.YYYYMMDDThhmmss.P.csv</li>
+<li>Delta file or full file: Delta</li>
 <li>File transfer type: SFTP</li>
 <li>Sample file: <a href="sample_files/FROM_VENDOR.EMT.20240923T104016.T.csv" target="_blank">here</a></li>
 </ul>
@@ -440,13 +431,10 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="outbound-ack-file" class="level4">
 <h4 class="anchored" data-anchor-id="outbound-ack-file">Outbound Enrollment Ack File</h4>
 <ul>
-<li>Direction: Carrier outbound/administrator inbound<br>
-</li>
-<li>File type: CSV<br>
-</li>
+<li>Direction: Carrier outbound/administrator inbound</li>
+<li>File type: CSV</li>
 <li>File spec: <a href="./outbound_enrollment_spec.html">Outbound Enrollment Ack File Spec</a></li>
-<li>Cadence: Daily<br>
-</li>
+<li>Cadence: Daily</li>
 <li>Naming convention: TO_ADMIN_NAME.ACK.YYYYMMDDThhmmss.P.csv</li>
 <li>Sample file: <a href="sample_files/FROM_OSCAR.ACK.20240912T020212.T.csv" target="_blank">here</a></li>
 </ul>
@@ -454,13 +442,10 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="outbound-enrollment-file" class="level4">
 <h4 class="anchored" data-anchor-id="outbound-enrollment-file">Outbound Enrollment File</h4>
 <ul>
-<li>File type: CSV<br>
-</li>
+<li>File type: CSV</li>
 <li>File spec: <a href="./file_specifications.html">Outbound Enrollment File</a></li>
-<li>Cadence: Daily<br>
-</li>
-<li>Naming convention: FROM_CARRIER.OUT.YYYYMMDDThhmmss.P.csv<br>
-</li>
+<li>Cadence: Daily</li>
+<li>Naming convention: FROM_CARRIER.OUT.YYYYMMDDThhmmss.P.csv</li>
 <li>Delta file or full file: Delta</li>
 <li>Sample file: <a href="sample_files/FROM_OSCAR.OUT.20240912T224634.T.csv" target="_blank">here</a></li>
 </ul>
@@ -468,15 +453,11 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <section id="outbound-reconciliation-file" class="level4">
 <h4 class="anchored" data-anchor-id="outbound-reconciliation-file">Outbound Reconciliation File</h4>
 <ul>
-<li>File type: CSV<br>
-</li>
+<li>File type: CSV</li>
 <li>File spec: <a href="./outbound_reconcilliation_spec.html">Outbound Reconciliation File</a></li>
-<li>Cadence: Weekly<br>
-</li>
-<li>Full or Delta: Full snapshot of plan year, with 3 month look back to previous year<br>
-</li>
-<li>Naming Convention: FROM_CARRIER_SNAPSHOT.OUT.YYYYMMDDThhmmss.P.csv<br>
-</li>
+<li>Cadence: Weekly</li>
+<li>Full or Delta: Full snapshot of plan year, with 3 month look back to previous year</li>
+<li>Naming Convention: FROM_CARRIER_SNAPSHOT.OUT.YYYYMMDDThhmmss.P.csv</li>
 <li>Sample file: <a href="sample_files/FROM_OSCAR_SNAPSHOT.OUT.20241015T190751.P.csv" target="_blank">here</a></li>
 </ul>
 
