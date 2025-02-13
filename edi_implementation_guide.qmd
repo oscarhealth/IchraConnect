@@ -2,7 +2,7 @@
 title: "EDI Implementation Guide"
 ---
 
-ICHRA Connect's 834 and 820 EDI implementation follows CMS’ FFM standards and companion guide to accompany the X12 834 EDI standard. This includes bi-directional data transfers for net new enrollments as well as other enrollment transaction types, including terminations, cancellations, reinstatements and updates. We prefer to use the CMS standard for 820 EDIs to ensure consistency and reliability. With well-established existing on-exchange infrastructure and processes, Oscar and other carriers can streamline operations, simplify and expedite new integrations, and minimize discrepancies.
+ICHRA Connect's 834 and 820 EDI implementation follows CMS’ FFM standards and companion guide to accompany the X12 834 EDI standard. This includes bi-directional data transfers for net new enrollments as well as other enrollment transaction types, including terminations, cancellations, reinstatements and updates. We prefer to use the CMS standard for 820 EDI to ensure consistency and reliability. With well-established existing on-exchange infrastructure and processes, Oscar and other carriers can streamline operations, simplify and expedite new integrations, and minimize discrepancies.
 
 ## Integration Summary {#integration-file-summary}
 
