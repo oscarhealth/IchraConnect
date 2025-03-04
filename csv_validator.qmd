@@ -496,9 +496,9 @@ execute:
       errors.push(`Missing or empty required field "${fieldName}"`);
     }
     return errors;
-    }
+  }
 
-    function characterLimit(fieldName, row, characterLimit) {
+  function characterLimit(fieldName, row, characterLimit) {
     const errors = [];
     if (isPresent(fieldName, row)) {
       if (row[fieldName].length > characterLimit) {
@@ -506,9 +506,9 @@ execute:
       }
     }
     return errors;
-    }
+  }
 
-    function checkEnum(fieldName, row, allowedValues) {
+  function checkEnum(fieldName, row, allowedValues) {
     const errors = [];
     if (isPresent(fieldName, row)) {
       if (!allowedValues.includes(row[fieldName])) {
