@@ -625,12 +625,13 @@ execute:
       });
 
       csvRows.forEach((row, index) => {
+        const rowErrors = [];
         validators.forEach(validator => {
-          const rowErrors = validator(row);
-          if (rowErrors.length > 0) {
-            errors.push(`Row ${index + 1}: ${rowErrors.join(", ")}`);
-          }
+          rowErrors.push(...validator(row));
         });
+        if (rowErrors.length > 0) {
+          errors.push(`Row ${index + 1}:<ul>${rowErrors.map(err => `<li>${err}</li>`).join("")}</ul>`);
+        }
       });
   
       return errors;
