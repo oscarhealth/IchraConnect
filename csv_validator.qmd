@@ -582,6 +582,7 @@ execute:
     validateEnrolleeResidentialAddressZipcode,
     validateEnrolleeChangeType,
     validateEnrolleeAdditionalMaintenanceReason,
+    validateEnrolleeChangeEffectiveDate,
   ]
 
 
