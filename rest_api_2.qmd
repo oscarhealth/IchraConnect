@@ -1,0 +1,39 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+  }
+
+  textarea {
+    width: 60%;
+    height: 150px;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<div class="container">
+  <redoc
+    spec-url='test_api.json'
+    theme='{
+      "sidebar": {
+          "width": "0px"
+      }
+    }'
+    disable-search=true
+    hide-download-button=true
+    ></redoc>
+  <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"> </script>
+</div>
+

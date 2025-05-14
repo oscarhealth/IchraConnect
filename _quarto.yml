@@ -71,8 +71,13 @@ website:
       - section: "**File Validators**"
         contents:
           - csv_validator.qmd
-      - text: "**Coming Soon: REST API**"
+      - section: "**REST API(dev)**"
         href: rest_api.qmd
+        contents:
+          - text: rest api 1
+            href: rest_api_1.qmd
+          - text: rest api 2
+            href: rest_api_2.qmd
 
   page-footer:
     center:
@@ -94,5 +99,8 @@ format:
       - custom.scss
     css: styles.css
     toc: true
-    page-layout: article
+    page-layout: full
     linkcolor: "#4f50f6"
+
+resources:
+  - test_api.json
