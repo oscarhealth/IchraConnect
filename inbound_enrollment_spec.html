@@ -260,7 +260,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./supported_additional_maintenance_reasons.html" class="sidebar-item-text sidebar-link">
+  <a href="./additional_maintenance_reasons.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supported Additional Maintenance Reasons</span></a>
   </div>
 </li>
@@ -374,7 +374,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </header>
 
 
-<table class="table-striped caption-top table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Field Name</th>
@@ -445,7 +445,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>broker.email</td>
 <td>String</td>
 <td>Broker’s email address</td>
-<td>Valid Email Format (No delimiters)</td>
+<td>Valid Email Format</td>
 <td>john@test.com</td>
 <td>50</td>
 <td>N</td>
@@ -454,7 +454,79 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>broker.npn</td>
 <td>String</td>
 <td>Broker’s National Producer Number - required for enrollee attribution</td>
-<td>Valid 9-digit NPN (No delimiters)</td>
+<td>Valid 9-digit NPN</td>
+<td>123530000</td>
+<td>25</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>servicing_agent.first_name</td>
+<td>String</td>
+<td>Servicing Agent First Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>servicing_agent.middle_name</td>
+<td>String</td>
+<td>Servicing Agent Middle Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>servicing_agent.last_name</td>
+<td>String</td>
+<td>Servicing Agent Last Name</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>servicing_agent.prefix</td>
+<td>String</td>
+<td>Servicing Agent Prefix</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>servicing_agent.suffix</td>
+<td>String</td>
+<td>Servicing Agent Suffix</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>servicing_agent.phone_number</td>
+<td>String</td>
+<td>Servicing Agent’s phone number</td>
+<td>Valid 10-digit Phone Number (No delimiters)</td>
+<td>5109027836</td>
+<td>15</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>servicing_agent.email</td>
+<td>String</td>
+<td>Servicing Agent’s email address</td>
+<td>Valid Email Format</td>
+<td>john@test.com</td>
+<td>50</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>servicing_agent.npn</td>
+<td>String</td>
+<td>Servicing Agent’s National Producer Number - required for enrollee attribution</td>
+<td>Valid 9-digit NPN</td>
 <td>123530000</td>
 <td>25</td>
 <td>N</td>
@@ -471,8 +543,8 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>plan.hios_id</td>
 <td>String</td>
-<td>HIOS id</td>
-<td>14 digit HIOS id code including variant</td>
+<td>HIOS ID</td>
+<td>14-digit HIOS ID code including variant</td>
 <td>50221NJ0040001-02</td>
 <td>15</td>
 <td>Y</td>
@@ -489,20 +561,20 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>payment.routing_number</td>
 <td>Digit</td>
-<td></td>
+<td>Routing number</td>
 <td></td>
 <td>021000021</td>
 <td></td>
-<td>N</td>
+<td>Y if <code>other</code> payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>payment.account_number</td>
 <td>Digit</td>
+<td>Account number</td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td>N</td>
+<td>Y if <code>other</code> payment related fields are provided</td>
 </tr>
 <tr class="even">
 <td>payment.payer_name</td>
@@ -511,7 +583,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>N</td>
+<td>Y if <code>other</code> payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>payment.account_type</td>
@@ -520,7 +592,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td>CHECKING</td>
 <td></td>
-<td>N</td>
+<td>Y if <code>other</code> payment related fields are provided</td>
 </tr>
 <tr class="even">
 <td>payment.is_new_payment_instrument</td>
@@ -533,17 +605,17 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </tr>
 <tr class="odd">
 <td>enrollment.renewal_type</td>
-<td>Enum (ACTIVE/PASSIVE)</td>
+<td>Enum</td>
 <td>Renewal Type</td>
-<td>Valid enum value (See DataType column)</td>
-<td>INITIATION</td>
+<td>Valid enum value (ACTIVE/PASSIVE)</td>
+<td></td>
 <td></td>
 <td>N</td>
 </tr>
 <tr class="even">
 <td>enrollment.external_policy_id</td>
 <td>String</td>
-<td>Unique identifier for the policy (coming from the partner)(important)</td>
+<td>Unique identifier for the policy (coming from the partner)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -610,7 +682,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td>N</td>
 </tr>
 <tr class="even">
 <td>employer.employer_tin</td>
@@ -619,12 +691,12 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td>N</td>
 </tr>
 <tr class="odd">
 <td>enrollee.external_member_id</td>
 <td>String</td>
-<td>member ID defined by vendor</td>
+<td>Member ID defined by vendor</td>
 <td></td>
 <td></td>
 <td></td>
@@ -633,11 +705,11 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.issuer_member_id</td>
 <td>String</td>
-<td>member ID defined by issuer</td>
+<td>Member ID defined by issuer</td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td>N</td>
 </tr>
 <tr class="odd">
 <td>enrollee.first_name</td>
@@ -706,7 +778,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>enrollee.ssn</td>
 <td>String</td>
 <td>Enrollee Social Security Number</td>
-<td>Valid 9-digit SSN (No delimiters)</td>
+<td>Valid 9-digit SSN</td>
 <td>123456789</td>
 <td></td>
 <td>N</td>
@@ -722,9 +794,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </tr>
 <tr class="even">
 <td>enrollee.sex</td>
-<td>Enum (MALE/FEMALE)</td>
+<td>Enum</td>
 <td>Enrollee Sex</td>
-<td>Valid enum value (See DataType column)</td>
+<td>Valid enum value (MALE/FEMALE)</td>
 <td>FEMALE</td>
 <td></td>
 <td>Y</td>
@@ -750,8 +822,8 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="odd">
 <td>enrollee.is_tobacco_user</td>
 <td>Boolean</td>
-<td>Specifies is enrollee is a tobacco user</td>
-<td>Valid Boolen String</td>
+<td>Specifies if enrollee is a tobacco user</td>
+<td>Valid Boolean String</td>
 <td>TRUE</td>
 <td></td>
 <td>Y</td>
@@ -759,7 +831,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.relationship_to_policy_holder</td>
 <td>Enum</td>
-<td>Enrollee’s relationship to policy holder(See <a href="./relationship_code_mapping.html">Relationship Code Mapping</a>)</td>
+<td>Enrollee’s relationship to policy holder (See <a href="./relationship_code_mapping.html">Relationship Code Mapping</a>)</td>
 <td>Valid enum value</td>
 <td>15</td>
 <td></td>
@@ -769,7 +841,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>enrollee.is_requesting_coverage</td>
 <td>Boolean</td>
 <td>Specifies if enrollee is requesting coverage</td>
-<td>Valid Boolen String</td>
+<td>Valid Boolean String</td>
 <td>TRUE</td>
 <td></td>
 <td>Y</td>
@@ -790,7 +862,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td>1996-01-01</td>
 <td></td>
-<td>Y</td>
+<td>N</td>
 </tr>
 <tr class="even">
 <td>enrollee.language_preference</td>
@@ -903,11 +975,11 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.additional_maintenance_reason</td>
 <td>String</td>
-<td><a href="./supported_additional_maintenance_reasons.html">Additional maintenance reason code</a> for the policy status change.</td>
+<td><a href="./additional_maintenance_reasons.html">Additional maintenance reason code</a> for the policy status change.</td>
 <td></td>
 <td>e.g.&nbsp;LEAVE_PLATFORM</td>
 <td></td>
-<td>N</td>
+<td>Y if enrollee.change_type is <code>CHANGE</code></td>
 </tr>
 <tr class="odd">
 <td>enrollee.change_effective_date</td>
@@ -916,7 +988,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td></td>
 <td></td>
-<td></td>
+<td>Y if enrollee.change_type is <code>CHANGE</code></td>
 </tr>
 </tbody>
 </table>
