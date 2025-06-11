@@ -195,62 +195,49 @@ execute:
     },
     };
 
-    function validateField(fieldName, value) {
-    const rules = VALIDATION_RULES[fieldName];
-    const errors = [];
+    function validateField(fieldName, value, row) {
+      const rules = VALIDATION_RULES[fieldName];
+      const errors = [];
 
-    if (rules?.required) {
-      #' Checks if the given condition is true and determines if the function is required.
-      #'
-      #' This function evaluates a condition to determine whether it is necessary to proceed
-      #' with the execution of the function. It is typically used to ensure that certain
-      #' prerequisites or logical checks are met before performing further operations.
-      #'
-      #' @param condition A logical expression or value that determines whether the function is required.
-      #'                  If `TRUE`, the function is considered required; otherwise, it is not.
-      #' @return A logical value indicating whether the function is required (`TRUE`) or not (`FALSE`).
-      #' @examples
-      #' # Example usage:
-      #' is_required <- required(condition = x > 5)
-      #' if (is_required) {
-      #'   # Perform necessary operations
-      #' }
-      const isRequired = typeof rules.required === 'function' ? rules.required(row) : rules.required;
-      if (isRequired && (!value || value.trim() === '')) {
-      errors.push(`Missing or empty required field "${fieldName}"`);
+      if (rules?.required) {
+        const isRequired = typeof rules.required === 'function' ? rules.required(row) : rules.required;
+        if (isRequired && (!value || value.trim() === '')) {
+        errors.push(`Missing or empty required field "${fieldName}"`);
+        }
       }
-    }
 
-    if (rules?.maxLength && value?.length > rules.maxLength) {
-      errors.push(`Field "${fieldName}" exceeds character limit of ${rules.maxLength}. Value: "${value}"`);
-    }
-
-    if (rules?.enum && !rules.enum.includes(value)) {
-      errors.push(`Field "${fieldName}" has an invalid value "${value}". Allowed values are: ${rules.enum.join(", ")}`);
-    }
-    if (rules?.isNumberOrFloat) {
-      if (isNaN(parseFloat(value)) || isFinite(value)) {
-      errors.push(`Field "${fieldName}" has an invalid value "${value}". Expected a valid number or float.`);
+      if (rules?.maxLength && value?.length > rules.maxLength) {
+        errors.push(`Field "${fieldName}" exceeds character limit of ${rules.maxLength}. Value: "${value}"`);
       }
-    }
 
-    if (rules?.regex && !rules.regex.test(value)) {
-      errors.push(`Field "${fieldName}" has an invalid format "${value}". Expected format: ${rules.regex}`);
-    }
-    if (rules?.allNoneOrAllNotNone) {
-      const relatedFields = rules.allNoneOrAllNotNone;
-      const allValues = relatedFields.map(field => row[field]);
-      const allNone = allValues.every(val => val === null || val === undefined || val.trim() === '');
-      const allNotNone = allValues.every(val => val !== null && val !== undefined && val.trim() !== '');
-      if (!allNone && !allNotNone) {
-      errors.push(`Fields ${relatedFields.join(", ")} must be either all None or all not None.`);
+      if (rules?.enum && value !== "" && !rules.enum.includes(value)) {
+        errors.push(`Field "${fieldName}" has an invalid value "${value}". Allowed values are: ${rules.enum.join(", ")}`);
       }
+
+      if (rules?.isNumberOrFloat) {
+        if (isNaN(parseFloat(value)) || !isFinite(parseFloat(value))) {
+          errors.push(`Field "${fieldName}" has an invalid value "${value}". Expected a valid number or float.`);
+        }
+      }
+
+      if (rules?.regex && !rules.regex.test(value)) {
+        errors.push(`Field "${fieldName}" has an invalid format "${value}". Expected format: ${rules.regex}`);
+      }
+
+      if (rules?.allNoneOrAllNotNone) {
+        const relatedFields = rules.allNoneOrAllNotNone;
+        const allValues = relatedFields.map(field => row[field]);
+        const allNone = allValues.every(val => val === null || val === undefined || val.trim() === '');
+        const allNotNone = allValues.every(val => val !== null && val !== undefined && val.trim() !== '');
+        if (!allNone && !allNotNone) {
+        errors.push(`Fields ${relatedFields.join(", ")} must be either all None or all not None.`);
+        }
+      }
+      return errors;
     }
-    return errors;
-  }
 
   function validateRow(row) {
-    return Object.keys(row).flatMap(fieldName => validateField(fieldName, row[fieldName]));
+    return Object.keys(row).flatMap(fieldName => validateField(fieldName, row[fieldName], row));
   }
 
   function validateCSV(content) {
