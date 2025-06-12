@@ -155,8 +155,10 @@ execute:
         FIELDS.PAYMENT_IS_NEW_PAYMENT_INSTRUMENT,
       ],
     },
-
     [FIELDS.ENROLLMENT_RENEWAL_TYPE]: { enum: ['PASSIVE', 'ACTIVE'] },
+    [FIELDS.ENROLLMENT_EXTERNAL_POLICY_ID]: {
+      eitherOrRequired: [FIELDS.ENROLLMENT_EXTERNAL_POLICY_ID, FIELDS.ENROLLMENT_APPLICATION_ID],
+    },
     [FIELDS.ENROLLMENT_DATE_SIGNED]: { required: true },
     [FIELDS.ENROLLMENT_QUALIFYING_EVENT]: {
       enum: [
@@ -244,6 +246,14 @@ execute:
         const allNotNone = allValues.every(val => val !== null && val !== undefined && val.trim() !== '');
         if (!allNone && !allNotNone) {
         errors.push(`Fields ${relatedFields.join(", ")} must be either all None or all not None.`);
+        }
+      }
+
+      if (rules?.eitherOrRequired) {
+        const relatedFields = rules.eitherOrRequired;
+        const hasAtLeastOneValue = relatedFields.some(field => row[field] !== null && row[field] !== undefined && row[field].trim() !== '');
+        if (!hasAtLeastOneValue) {
+          errors.push(`At least one of the fields ${relatedFields.join(", ")} is required.`);
         }
       }
       return errors;
