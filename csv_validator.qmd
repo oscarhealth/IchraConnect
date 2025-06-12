@@ -152,6 +152,7 @@ execute:
         FIELDS.PAYMENT_ACCOUNT_NUMBER,
         FIELDS.PAYMENT_PAYER_NAME,
         FIELDS.PAYMENT_ACCOUNT_TYPE,
+        FIELDS.PAYMENT_IS_NEW_PAYMENT_INSTRUMENT,
       ],
     },
 
@@ -186,6 +187,7 @@ execute:
     [FIELDS.ENROLLEE_COVERAGE_START_DATE]: { required: true },
     [FIELDS.ENROLLEE_COVERAGE_END_DATE]: {
       required: (row) => ['CANCELLATION', 'TERMINATION'].includes(row[FIELDS.ENROLLEE_CHANGE_TYPE]),
+      mustBeNullIf: (row) => !['CANCELLATION', 'TERMINATION'].includes(row[FIELDS.ENROLLEE_CHANGE_TYPE]),
     },
     [FIELDS.ENROLLEE_LANGUAGE_PREFERENCE]: { enum: ['eng', 'spa', 'ara', 'chi', 'fre', 'cpf', 'deu', 'guj', 'hin', 'kor', 'pol', 'por', 'rus', 'tgl', 'urd', 'vie'] },
     [FIELDS.ENROLLEE_RESIDENTIAL_ADDRESS_ADDRESS_LINE_1]: { required: true },
@@ -206,7 +208,14 @@ execute:
       if (rules?.required) {
         const isRequired = typeof rules.required === 'function' ? rules.required(row) : rules.required;
         if (isRequired && (!value || value.trim() === '')) {
-        errors.push(`Missing or empty required field "${fieldName}"`);
+          errors.push(`Missing or empty required field "${fieldName}"`);
+        }
+      }
+
+      if (rules?.mustBeNullIf) {
+        const mustBeNullCondition = typeof rules.mustBeNullIf === 'function' ? rules.mustBeNullIf(row) : rules.mustBeNullIf;
+        if (mustBeNullCondition && value !== null && value !== undefined && value.trim() !== '') {
+          errors.push(`Field "${fieldName}" must be null or empty due to condition.`);
         }
       }
 
