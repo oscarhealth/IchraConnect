@@ -454,9 +454,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>broker.npn</td>
 <td>String</td>
 <td>Broker’s National Producer Number - required for enrollee attribution</td>
-<td>Valid 9-digit NPN</td>
+<td>Valid NPN</td>
 <td>123530000</td>
-<td>25</td>
+<td>10</td>
 <td>N</td>
 </tr>
 <tr class="odd">
@@ -526,9 +526,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>servicing_agent.npn</td>
 <td>String</td>
 <td>Servicing Agent’s National Producer Number - required for enrollee attribution</td>
-<td>Valid 9-digit NPN</td>
+<td>Valid NPN</td>
 <td>123530000</td>
-<td>25</td>
+<td>10</td>
 <td>N</td>
 </tr>
 <tr class="odd">
@@ -544,9 +544,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>plan.hios_id</td>
 <td>String</td>
 <td>HIOS ID</td>
-<td>14-digit HIOS ID code including variant</td>
+<td>14-digit HIOS ID code plus variant</td>
 <td>50221NJ0040001-02</td>
-<td>15</td>
+<td>17</td>
 <td>Y</td>
 </tr>
 <tr class="odd">
@@ -601,7 +601,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>Y</td>
+<td>Y if <code>other</code> payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>enrollment.renewal_type</td>
@@ -619,12 +619,12 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>N</td>
+<td>Y</td>
 </tr>
 <tr class="odd">
 <td>enrollment.external_subscriber_id</td>
 <td>String</td>
-<td>Required if PlanChange/Cancel enrollment<br> Same as subscriber’s external_member_id</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -655,7 +655,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>N</td>
+<td>Y if enrollee.change_type is not <code>CANCELLATION</code> or <code>TERMINATION</code></td>
 </tr>
 <tr class="odd">
 <td>enrollment.qualifying_event_date</td>
@@ -664,7 +664,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td>1996-01-01</td>
 <td></td>
-<td>N</td>
+<td>Y if qualifying_event provided</td>
 </tr>
 <tr class="even">
 <td>enrollment.application_id</td>
@@ -862,13 +862,13 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td>1996-01-01</td>
 <td></td>
-<td>N</td>
+<td>Only include/required when change type is <code>CANCELLATION</code> or <code>TERMINATION</code></td>
 </tr>
 <tr class="even">
 <td>enrollee.language_preference</td>
 <td>Enum</td>
 <td>Enrollee Language Preference</td>
-<td>Valid enum value (See Language Code mapping)</td>
+<td>Valid enum value (See <a href="./language_mapping.html">Language Code mapping</a>)</td>
 <td>spa</td>
 <td></td>
 <td>N</td>
