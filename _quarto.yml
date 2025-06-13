@@ -43,14 +43,16 @@ website:
         contents:
           - text: "Implementation Guide"
             href: csv_implementation_guide.qmd
-          - section: "File Specs"
+          - section: "File Specifications"
             contents:
-              - file_specifications.qmd
+              - file_spec.qmd
               - inbound_enrollment_spec.qmd
               - outbound_enrollment_ack_spec.qmd
               - outbound_enrollment_spec.qmd
               - outbound_reconcilliation_spec.qmd
-          - section: "Sample File Downloads"
+          - text: "Test Cases and Downloads"
+            href: test_cases_guide.qmd
+          - section: "Additional Sample Downloads"
             contents:
               - text: Inbound Enrollment CSV
                 href: sample_files/FROM_VENDOR.EMT.20240923T104016.T.csv
@@ -64,14 +66,14 @@ website:
               - text: Reconcilation CSV
                 href: sample_files/FROM_OSCAR_SNAPSHOT.OUT.20241015T190751.P.csv
                 target: _blank
-          - section: "Field Specs"
-            contents:
-              - relationship_code_mapping.qmd
-              - ethnicity_code_mapping.qmd
-              - language_mapping.qmd
-              - marital_status_mapping.qmd
-              - supported_qle_codes.qmd
-              - additional_maintenance_reasons.qmd
+      - section: "**Field Specs**"
+        contents:
+          - relationship_code_mapping.qmd
+          - ethnicity_code_mapping.qmd
+          - language_mapping.qmd
+          - marital_status_mapping.qmd
+          - supported_qle_codes.qmd
+          - additional_maintenance_reasons.qmd
       - section: "**File Validators**"
         contents:
           - csv_validator.qmd
