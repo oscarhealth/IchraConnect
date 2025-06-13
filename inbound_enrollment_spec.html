@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -76,6 +76,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -374,16 +377,18 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </header>
 
 
-<table class="caption-top table">
+<div id="2d8265fc" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
-<th>Field Name</th>
-<th>DataType</th>
-<th>Description</th>
-<th>Format</th>
-<th>Example</th>
-<th>Length</th>
-<th>Required</th>
+<th data-quarto-table-cell-role="th">Field Name</th>
+<th data-quarto-table-cell-role="th">DataType</th>
+<th data-quarto-table-cell-role="th">Description</th>
+<th data-quarto-table-cell-role="th">Format</th>
+<th data-quarto-table-cell-role="th">Example</th>
+<th data-quarto-table-cell-role="th">Length</th>
+<th data-quarto-table-cell-role="th">Required</th>
 </tr>
 </thead>
 <tbody>
@@ -563,9 +568,9 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>Digit</td>
 <td>Routing number</td>
 <td></td>
-<td>021000021</td>
+<td>21000021</td>
 <td></td>
-<td>Y if <code>other</code> payment related fields are provided</td>
+<td>Y if other payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>payment.account_number</td>
@@ -574,7 +579,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>Y if <code>other</code> payment related fields are provided</td>
+<td>Y if other payment related fields are provided</td>
 </tr>
 <tr class="even">
 <td>payment.payer_name</td>
@@ -583,7 +588,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>Y if <code>other</code> payment related fields are provided</td>
+<td>Y if other payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>payment.account_type</td>
@@ -592,7 +597,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td>CHECKING</td>
 <td></td>
-<td>Y if <code>other</code> payment related fields are provided</td>
+<td>Y if other payment related fields are provided</td>
 </tr>
 <tr class="even">
 <td>payment.is_new_payment_instrument</td>
@@ -601,7 +606,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>Y if <code>other</code> payment related fields are provided</td>
+<td>Y if other payment related fields are provided</td>
 </tr>
 <tr class="odd">
 <td>enrollment.renewal_type</td>
@@ -635,7 +640,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>Boolean</td>
 <td>Term or cancel existing eligibility if it overlaps and prefer new one</td>
 <td>Valid Boolean String</td>
-<td>False</td>
+<td>FALSE</td>
 <td></td>
 <td>N</td>
 </tr>
@@ -655,7 +660,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td></td>
 <td></td>
 <td></td>
-<td>Y if enrollee.change_type is not <code>CANCELLATION</code> or <code>TERMINATION</code></td>
+<td>Y if enrollee.change_type is not CANCELLATION or TERMINATION</td>
 </tr>
 <tr class="odd">
 <td>enrollment.qualifying_event_date</td>
@@ -813,7 +818,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.ethnicity</td>
 <td>Enum</td>
-<td>Enrollee Ethnicity (See <a href="./ethnicity_code_mapping.html">Ethnicity Code mapping</a>)</td>
+<td>Enrollee Ethnicity (See Ethnicity Code mapping)</td>
 <td>Valid enum value</td>
 <td>2135-2</td>
 <td></td>
@@ -831,7 +836,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.relationship_to_policy_holder</td>
 <td>Enum</td>
-<td>Enrollee’s relationship to policy holder (See <a href="./relationship_code_mapping.html">Relationship Code Mapping</a>)</td>
+<td>Enrollee’s relationship to policy holder (See Relationship Code Mapping)</td>
 <td>Valid enum value</td>
 <td>15</td>
 <td></td>
@@ -862,13 +867,13 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td>1996-01-01</td>
 <td></td>
-<td>Only include/required when change type is <code>CANCELLATION</code> or <code>TERMINATION</code></td>
+<td>Only include/required when change type is CANCELLATION or TERMINATION</td>
 </tr>
 <tr class="even">
 <td>enrollee.language_preference</td>
 <td>Enum</td>
 <td>Enrollee Language Preference</td>
-<td>Valid enum value (See <a href="./language_mapping.html">Language Code mapping</a>)</td>
+<td>Valid enum value (See Language Code mapping)</td>
 <td>spa</td>
 <td></td>
 <td>N</td>
@@ -975,11 +980,11 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <tr class="even">
 <td>enrollee.additional_maintenance_reason</td>
 <td>String</td>
-<td><a href="./additional_maintenance_reasons.html">Additional maintenance reason code</a> for the policy status change.</td>
+<td>Additional maintenance reason code for the policy status change.</td>
 <td></td>
-<td>e.g.&nbsp;LEAVE_PLATFORM</td>
+<td>e.g. LEAVE_PLATFORM</td>
 <td></td>
-<td>Y if enrollee.change_type is <code>CHANGE</code></td>
+<td>Y if enrollee.change_type is CHANGE</td>
 </tr>
 <tr class="odd">
 <td>enrollee.change_effective_date</td>
@@ -988,10 +993,12 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <td>YYYY-MM-DD</td>
 <td></td>
 <td></td>
-<td>Y if enrollee.change_type is <code>CHANGE</code></td>
+<td>Y if enrollee.change_type is CHANGE</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 
 
 
