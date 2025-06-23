@@ -199,7 +199,7 @@ display(HTML(df.to_html(index=False).replace("\\n","<br>")))
 ```
 4. Change transaction with policy change, new premium and QLE.
 - [download](test_cases/four_four.csv){target="_blank"}
-<!-- ```{python}
+```{python}
 with open('test_cases/four_four.csv', 'r') as file:
     csv_data = file.read()
 # Read the CSV data
@@ -207,7 +207,7 @@ pd.set_option('display.max_colwidth', None)
 df = pd.read_csv(StringIO(csv_data), sep=',', index_col=None, keep_default_na=False, header=0)
 # Display the DataFrame as a table
 display(HTML(df.to_html(index=False).replace("\\n","<br>")))
-``` -->
+```
 5. Change transaction to remove one dependent and update new premium and QLE
 - [download](test_cases/four_five.csv){target="_blank"}
 ```{python}
