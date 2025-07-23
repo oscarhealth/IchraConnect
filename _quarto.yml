@@ -77,8 +77,21 @@ website:
       - section: "**File Validators**"
         contents:
           - csv_validator.qmd
-      - text: "**Coming Soon: REST API**"
-        href: rest_api.qmd
+      - section: "**Coming Soon: REST API**"
+        contents:
+          - section: Overview
+            contents:
+              - text: "Getting Started"
+                href: api/get_start.qmd
+              - text: "Authentication"
+                href: api/authentication.qmd
+              - text: "Usage"
+                href: api/usage.qmd
+            href: api/rest_api.qmd
+          - section: Endpoints
+            contents:
+              - text: memberships
+                href: api/memberships.qmd
 
   page-footer:
     center:
@@ -102,3 +115,6 @@ format:
     toc: true
     page-layout: full
     linkcolor: "#4f50f6"
+
+resources:
+  - api/*.yaml
