@@ -42,7 +42,7 @@ website:
       - section: "**CSV**"
         contents:
           - text: "Implementation Guide"
-            href: csv/csv_implementation_guide.qmd
+            href: csv/csv_implementation_guide.html
           - section: "File Specifications"
             contents:
               - csv/file_spec/file_spec.qmd
