@@ -289,8 +289,17 @@ execute:
     return errors;
   }
 
-  document.getElementById("csvFileInput").addEventListener("change", function (event) {
-    const file = event.target.files[0];
+  document.getElementById("validateButton").addEventListener("click", function () {
+    const fileInput = document.getElementById("csvFileInput");
+    const textarea = document.getElementById("csvTextarea");
+    const file = fileInput.files[0];
+    const textContent = textarea.value.trim();
+
+    if ((file && textContent) || (!file && !textContent)) {
+      displayResults(["Please provide either a CSV file or paste CSV content, not both."]);
+      return;
+    }
+
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {
@@ -298,10 +307,8 @@ execute:
         displayResults(errors);
       };
       reader.readAsText(file);
+      return;
     }
-  });
-
-  document.getElementById("validateButton").addEventListener("click", function () {
     const content = document.getElementById("csvTextarea").value;
     const errors = validateCSV(content);
     displayResults(errors);
