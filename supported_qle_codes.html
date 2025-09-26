@@ -79,6 +79,41 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+// Redirect all routes except csv_validator.html and asset files
+(function() {
+  var path = window.location.pathname;
+
+  // Don't redirect if we're on the csv_validator.html page
+  if (path.endsWith('/csv_validator.html') || path === '/csv_validator.html') {
+    return; // Let the page load normally
+  }
+
+  // Don't redirect asset files (images, css, js, documents, etc.)
+  var assetExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.ico',
+                        '.css', '.js', '.json', '.xml', '.txt',
+                        '.pdf', '.csv', '.edi'];
+
+  for (var i = 0; i < assetExtensions.length; i++) {
+    if (path.endsWith(assetExtensions[i])) {
+      return; // Let asset files load normally
+    }
+  }
+
+  // Generic redirect: convert any .html page to ReadMe docs URL
+  if (path.endsWith('.html')) {
+    // Extract filename from path (remove directories)
+    var filename = path.split('/').pop();
+    // Remove .html extension and convert underscores to hyphens
+    var docName = filename.replace('.html', '').replace(/_/g, '-');
+    window.location.replace('https://ichra-connect.readme.io/docs/' + docName);
+    return;
+  }
+
+  // Default redirect to homepage for all other routes
+  window.location.replace('https://ichra-connect.readme.io/');
+})();
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -405,7 +440,7 @@ gtag('config', 'G-TT9QQLNB0E', { 'anonymize_ip': true});
 </header>
 
 
-<div id="a72f9e10" class="cell" data-execution_count="1">
+<div id="2b99a72e" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <colgroup>
